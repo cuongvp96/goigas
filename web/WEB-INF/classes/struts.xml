@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="default"  extends="tiles-default" namespace="/">
+        <action name="login" class="Controller.ActionUser" method="login">
+            <result name="login" type="tiles">login.tiles</result>		 		
+        </action>
+        <action name="checkLogin" class="Controller.ActionUser" method="checkLogin">
+            <result name="success" type="tiles">display.tiles</result>
+            <result name="login" type="tiles">login.tiles</result>
+            <result name="success" type="redirect">
+                <param name="location">index</param>
+            </result>			 		
+        </action>
+        <action name="checkLoginGG" class="Controller.ActionUser" method="checkLoginGG">
+            <result name="success" type="tiles">display.tiles</result>
+            <result name="login" type="tiles">login.tiles</result>	
+            <result name="success" type="redirect">
+                <param name="location">index</param>
+            </result>		 		
+        </action>
+        <action name="checkLoginFB" class="Controller.ActionUser" method="checkLoginFB">
+            <result name="success" type="tiles">display.tiles</result>
+            <result name="login" type="tiles">login.tiles</result>
+            <result name="success" type="redirect">
+                <param name="location">index</param>
+            </result>			 		
+        </action>
+        <action name="signOut" class="Controller.ActionUser" method="signOut">
+            <result name="login" type="tiles">login.tiles</result>
+            <result name="login" type="redirect">
+                <param name="location">login</param>
+            </result>	
+        </action>
+        <action name="checkAddCuaHang" class="Controller.ActionCuaHang" method="checkAddCuaHang">
+            <result name="input" type="tiles">AddCuaHang.tiles</result>   
+            <result name="success" type="tiles">display.tiles</result>
+            <result name="error" type="tiles">error.tiles</result>	
+            <result name="login" type="tiles">login.tiles</result>
+            <result name="success" type="redirect">
+                <param name="location">index</param>
+            </result>	
+        </action>
+        
+        <action name="delCH" class="Controller.ActionCuaHang" method="delCH">
+            <result name="success" type="tiles">display.tiles</result>
+            <result name="error" type="tiles">error.tiles</result>
+            <result name="login" type="tiles">login.tiles</result>
+            <!--            <result name="success" type="dispatcher">
+                <param name="location">index</param>
+            </result>	 	                      		 		-->
+        </action>
+        <action name="addCuaHang" class="Controller.ActionCuaHang" method="addCuaHang">
+            <result name="success" type="tiles">AddCuaHang.tiles</result>
+            <result name="login" type="tiles">login.tiles</result>	 	 		
+        </action>
+        <action name="editCH" class="Controller.ActionCuaHang" method="editCuaHang">
+            <result name="success" type="tiles">EditCuaHang.tiles</result>
+            <result name="login" type="tiles">login.tiles</result>	 	 	
+        </action>
+        <action name="index" class="Controller.ActionUser" method="home">
+            <result name="success" type="tiles">display.tiles</result>
+            <result name="input" type="tiles">login.tiles</result>
+            <result name="login" type="tiles">login.tiles</result>		                 		 		
+        </action>
+        <action name="checkEditCuaHang" class="Controller.ActionCuaHang" method="checkEditCuaHang">
+            <result name="input" type="tiles">EditCuaHang.tiles</result>   
+            <result name="success" type="tiles">display.tiles</result>
+            <result name="error" type="tiles">error.tiles</result>	
+            <result name="login" type="tiles">login.tiles</result>
+            <result name="success" type="redirect">
+                <param name="location">index</param>
+            </result>
+            <!--                <interceptor-ref name="token"></interceptor-ref>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+            <result name="invalid.token">error.tiles</result>	-->
+        </action>
+        <action name="paging" class="Controller.ActionCuaHang" method="paging">
+             <result name="success" type="tiles">display.tiles</result>
+            <result name="login" type="tiles">login.tiles</result>	 	 		
+        </action>
+          <action name="search" class="Controller.ActionSearchCuaHang" method="search">
+             <result name="success" type="tiles">search.tiles</result>
+            <result name="error" type="tiles">error.tiles</result>	 	 		
+        </action>
+    </package>
+</struts>

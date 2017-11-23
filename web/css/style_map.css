@@ -1,0 +1,48 @@
+#add_main1{
+    position: relative; 
+    float: left;
+    
+}
+.errorMessage {
+  color: red;
+}
+#add_main2{
+    position: relative; 
+    float: left;
+    
+}
+#add_ch{
+     margin-left: 0px;
+     
+}
+#map{
+    height:400px;
+    width:600px;
+    position: absolute; 
+    border: 5px;
+    left: 400px; 
+    margin-left: 100px;
+}
+body{
+    margin: 0 auto;
+}
+#add_ch #sm{
+    padding: 5px;
+    margin-top: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+#pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 350px;
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+}

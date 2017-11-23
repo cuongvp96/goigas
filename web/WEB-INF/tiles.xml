@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="basetemplate" template="/jsp/Layout.jsp">
+        <put-attribute name="header" value="/jsp/Header.jsp"></put-attribute>
+        <put-attribute name="content" value=""></put-attribute>
+        <put-attribute name="footer" value="/jsp/Footer.jsp"></put-attribute>
+    </definition>
+    <definition name="templateMain" template="/jsp/Layout_Main.jsp">
+        <put-attribute name="header" value="/jsp/Header.jsp"></put-attribute>
+        <put-attribute name="content" value=""></put-attribute>
+        <put-attribute name="footer" value="/jsp/Footer_Main.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="base1" template="/jsp/Layout.jsp">
+        <put-attribute name="header" value=""></put-attribute>
+        <put-attribute name="content" value=""></put-attribute>
+        <put-attribute name="footer" value=""></put-attribute>
+    </definition>              
+    <definition name="AddCuaHang.tiles" extends="templateMain">	 
+        <put-attribute name="content" value="/jsp/AddCuaHang.jsp"></put-attribute>	 
+    </definition>
+	
+    <definition name="login.tiles" extends="basetemplate">	 
+        <put-attribute name="content" value="/jsp/Login.jsp"></put-attribute>	 
+    </definition>
+    <definition name="display.tiles" extends="templateMain">	 
+        <put-attribute name="content" value="/jsp/Display.jsp"></put-attribute>	 
+    </definition>
+    <definition name="home.tiles" extends="base1">	 
+        <put-attribute name="content" value="/jsp/Home.jsp"></put-attribute>	 
+    </definition>
+    
+    <definition name="EditCuaHang.tiles" extends="templateMain">	 
+        <put-attribute name="content" value="/jsp/EditCuaHang.jsp"></put-attribute>	 
+    </definition>
+   
+    <definition name="error.tiles" extends="templateMain">	 
+        <put-attribute name="content" value="/jsp/error.jsp"></put-attribute>	 
+    </definition>
+    <definition name="search.tiles" extends="templateMain">	 
+        <put-attribute name="content" value="/jsp/Search.jsp"></put-attribute>	 
+    </definition>
+
+</tiles-definitions>
